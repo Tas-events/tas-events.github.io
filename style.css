@@ -39,28 +39,28 @@ nav a.active {
 /* Hero-Bereich (Logo + Begrüßung) */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 40px 20px;      /* weniger Abstand */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
+  min-height: auto;        /* keine feste Höhe mehr */
 }
 
 .hero .logo {
-  max-width: 200px; /* kleineres Logo */
+  max-width: 200px;        /* Logo kleiner */
   margin-bottom: 15px;
 }
 
 .hero h1 {
-  font-size: 1.8rem; /* Überschrift kleiner */
+  font-size: 1.8rem;       /* kleinere Schrift */
   color: #a85cff;
   text-shadow: 0 0 8px #a85cff, 0 0 15px #5cf0ff;
   margin-bottom: 8px;
 }
 
 .hero p {
-  font-size: 0.95rem; /* kleinerer Text */
+  font-size: 0.95rem;      /* kleinerer Text */
   color: #ccc;
 }
 
@@ -75,7 +75,7 @@ nav a.active {
   box-shadow: 0 0 8px #a85cff;
   transition: 0.3s;
   margin-top: 12px;
-  font-size: 0.85rem; /* kleiner */
+  font-size: 0.85rem;
 }
 
 .btn:hover {
@@ -91,7 +91,7 @@ main {
 }
 
 main h2 {
-  font-size: 1.3rem; /* kleiner */
+  font-size: 1.3rem;
   color: #5cf0ff;
   margin-bottom: 12px;
   text-shadow: 0 0 6px #5cf0ff;
@@ -104,7 +104,7 @@ main ul {
 
 main ul li {
   margin: 6px 0;
-  font-size: 0.95rem; /* kleiner */
+  font-size: 0.95rem;
 }
 
 /* Künstler-Karten */
@@ -113,7 +113,7 @@ main ul li {
   border-radius: 10px;
   padding: 15px;
   margin: 15px auto;
-  max-width: 400px; /* schmaler */
+  max-width: 400px;
   text-align: center;
   box-shadow: 0 0 12px #a85cff55;
 }
@@ -126,7 +126,7 @@ main ul li {
 
 .artist-card h2 {
   color: #5cf0ff;
-  font-size: 1.1rem; /* kleiner */
+  font-size: 1.1rem;
   margin-bottom: 6px;
 }
 
@@ -136,6 +136,6 @@ footer {
   padding: 10px;
   background: #111;
   margin-top: 25px;
-  font-size: 0.75rem; /* kleiner */
+  font-size: 0.75rem;
   color: #aaa;
 }

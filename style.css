@@ -1,3 +1,42 @@
+/* Allgemein */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0a0a0a; /* Schwarzer Hintergrund */
+  color: #fff;
+}
+
+/* Navigation */
+header {
+  background: #111;
+  padding: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #a85cff; /* Neon-Lila */
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #5cf0ff; /* Neon-Blau */
+}
+
+nav a.active {
+  color: #5cf0ff; /* Neon-Blau */
+}
+
+/* Hero-Bereich (Logo + Begrüßung) */
 .hero {
   text-align: center;
   padding: 50px 20px;
@@ -8,6 +47,7 @@
   margin-bottom: 20px;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -22,4 +62,30 @@
 .btn:hover {
   background: #5cf0ff; /* Neon-Blau */
   box-shadow: 0 0 15px #5cf0ff;
+  color: #000;
+}
+
+/* Künstler-Karten */
+.artist-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 0 15px #a85cff55;
+}
+
+.artist-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  margin-top: 40px;
 }

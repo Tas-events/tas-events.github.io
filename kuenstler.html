@@ -1,64 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Künstler – Tas-events & Bookings</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #14001e;
-      color: white;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #ff00cc;
-      margin-bottom: 40px;
-    }
-    .artist {
-      background: #1f012d;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 700px;
-    }
-    .artist img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-    .highlight {
-      color: #ff00cc;
-    }
-    a {
-      color: #ff00cc;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Künstler – Tas-Events & Bookings</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Künstler bei Tas-events & Bookings</h1>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="kuenstler.html" class="active">Künstler</a></li>
+        <li><a href="archiv.html">Archiv</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="artist">
-    <h2>🎤 AYO & TEO</h2>
-    <p><strong>Genre:</strong> Hip-Hop<br>
-    <strong>Top-Track:</strong> "Rolex"<br>
-    <strong>Buchbar für:</strong> Clubshows, Festivals<br>
-    <strong>Zeitraum:</strong> Frei im Juni & Juli<br>
-    <strong>📩 Booking:</strong> <a href="mailto:bookings@tas-events.de">bookings@tas-events.de</a></p>
-    <img src="ayo-teo.png" alt="AYO & TEO">
-  </div>
+  <main>
+    <h1>Unsere Künstler</h1>
 
-  <div class="artist">
-    <h2>🎤 MC Menor JP</h2>
-    <p><strong>Genre:</strong> Hip-Hop<br>
-    <strong>Buchbar für:</strong> Clubshows, Festivals<br>
-    <strong>Zeitraum:</strong> Frei im Mai & Juni<br>
-    <strong>📩 Booking:</strong> <a href="mailto:bookings@tas-events.de">bookings@tas-events.de</a></p>
-    <img src="mc-menor.jpg" alt="MC Menor JP">
-  </div>
+    <!-- Beispiel-Künstler -->
+    <section class="artist-card">
+      <img src="images/dein-kuenstler.jpg" alt="Beispiel Künstler">
+      <h2>Neuer Künstlername</h2>
+      <p><strong>Genre:</strong> z. B. Hip-Hop</p>
+      <p><strong>Buchbar für:</strong> Clubshows und Festivals</p>
+      <p><strong>Kontakt:</strong> <a href="mailto:tasbooking@web.de">tasbooking@web.de</a></p>
+    </section>
 
+    <!-- Hinweis zum Archiv -->
+    <p>Frühere Künstler findest du im <a href="archiv.html">Archiv</a>.</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Tas-Events & Bookings</p>
+  </footer>
 </body>
 </html>

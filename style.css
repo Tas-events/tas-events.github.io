@@ -48,20 +48,20 @@ nav a.active {
 }
 
 .hero .logo {
-  max-width: 220px; /* etwas kleiner */
-  margin-bottom: 20px;
+  max-width: 200px; /* kleineres Logo */
+  margin-bottom: 15px;
 }
 
 .hero h1 {
-  font-size: 2rem; /* kleiner gemacht */
+  font-size: 1.8rem; /* Überschrift kleiner */
   color: #a85cff;
   text-shadow: 0 0 8px #a85cff, 0 0 15px #5cf0ff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .hero p {
-  font-size: 1rem; /* kleiner gemacht */
-  color: #ddd;
+  font-size: 0.95rem; /* kleinerer Text */
+  color: #ccc;
 }
 
 /* Buttons */
@@ -74,8 +74,8 @@ nav a.active {
   border-radius: 8px;
   box-shadow: 0 0 8px #a85cff;
   transition: 0.3s;
-  margin-top: 15px;
-  font-size: 0.9rem; /* kleiner */
+  margin-top: 12px;
+  font-size: 0.85rem; /* kleiner */
 }
 
 .btn:hover {
@@ -87,14 +87,14 @@ nav a.active {
 /* Hauptbereich */
 main {
   text-align: center;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 main h2 {
-  font-size: 1.5rem; /* kleiner */
+  font-size: 1.3rem; /* kleiner */
   color: #5cf0ff;
-  margin-bottom: 15px;
-  text-shadow: 0 0 8px #5cf0ff;
+  margin-bottom: 12px;
+  text-shadow: 0 0 6px #5cf0ff;
 }
 
 main ul {
@@ -103,8 +103,8 @@ main ul {
 }
 
 main ul li {
-  margin: 8px 0;
-  font-size: 1rem; /* kleiner */
+  margin: 6px 0;
+  font-size: 0.95rem; /* kleiner */
 }
 
 /* Künstler-Karten */
@@ -112,8 +112,8 @@ main ul li {
   background: #1a1a1a;
   border-radius: 10px;
   padding: 15px;
-  margin: 20px auto;
-  max-width: 450px;
+  margin: 15px auto;
+  max-width: 400px; /* schmaler */
   text-align: center;
   box-shadow: 0 0 12px #a85cff55;
 }
@@ -121,21 +121,21 @@ main ul li {
 .artist-card img {
   max-width: 100%;
   border-radius: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .artist-card h2 {
   color: #5cf0ff;
-  font-size: 1.3rem; /* kleiner */
-  margin-bottom: 8px;
+  font-size: 1.1rem; /* kleiner */
+  margin-bottom: 6px;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 12px;
+  padding: 10px;
   background: #111;
-  margin-top: 30px;
-  font-size: 0.8rem; /* kleiner */
+  margin-top: 25px;
+  font-size: 0.75rem; /* kleiner */
   color: #aaa;
 }

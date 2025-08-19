@@ -114,3 +114,24 @@ footer {
   font-size: 0.9rem;
   color: #aaa;
 }
+/* Hauptbereich (alles im Main zentrieren) */
+main {
+  text-align: center;    /* Alles mittig */
+  padding: 40px 20px;    /* Abstand */
+}
+
+main h2 {
+  color: #5cf0ff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #5cf0ff;
+}
+
+main ul {
+  list-style: none;       /* Keine Punkte */
+  padding: 0;
+}
+
+main ul li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}

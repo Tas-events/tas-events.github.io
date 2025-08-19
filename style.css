@@ -48,19 +48,19 @@ nav a.active {
 }
 
 .hero .logo {
-  max-width: 200px;        /* Logo kleiner */
+  max-width: 200px;
   margin-bottom: 15px;
 }
 
 .hero h1 {
-  font-size: 1.8rem;       /* kleinere Schrift */
+  font-size: 1.8rem;
   color: #a85cff;
   text-shadow: 0 0 8px #a85cff, 0 0 15px #5cf0ff;
   margin-bottom: 8px;
 }
 
 .hero p {
-  font-size: 0.95rem;      /* kleinerer Text */
+  font-size: 0.95rem;
   color: #ccc;
 }
 

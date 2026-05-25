@@ -1,1 +1,166 @@
-<!DOCTYPE html><html><head><title>Test</title></head><body><h1>Test Page</h1></body></html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tas-Events | Sponsoren gesucht</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { 
+      background-color: #0a0a0a; 
+      color: #fff; 
+      font-family: Arial, sans-serif;
+    }
+    .accent-purple { color: #a85cff; }
+    .accent-cyan { color: #5cf0ff; }
+    .hero-bg { 
+      background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.95)), 
+                  url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat; 
+    }
+    .neon-purple { 
+      text-shadow: 0 0 12px #a85cff, 0 0 20px #5cf0ff; 
+    }
+    .btn-purple {
+      background: #a85cff;
+      box-shadow: 0 0 15px #a85cff;
+      transition: all 0.3s;
+    }
+    .btn-purple:hover {
+      background: #5cf0ff;
+      box-shadow: 0 0 20px #5cf0ff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="bg-[#111] py-4 border-b border-[#5cf0ff]/30 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+      <img src="images/logo.png" alt="Tas-Events Logo" class="h-12 w-auto">
+      <div class="flex gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#5cf0ff]">Home</a>
+        <a href="#" class="hover:text-[#5cf0ff]">Events</a>
+        <a href="#" class="hover:text-[#5cf0ff]">Künstler</a>
+        <a href="sponsoring.html" class="text-[#5cf0ff] font-bold">Sponsoren</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-bg h-screen flex items-center relative">
+    <div class="max-w-6xl mx-auto px-6 text-center z-10">
+      <h1 class="text-6xl md:text-7xl font-bold mb-6 neon-purple">
+        SPONSOREN GESUCHT!
+      </h1>
+      <p class="text-3xl md:text-4xl accent-cyan mb-8">
+        Für den exklusiven Auftritt eines <span class="text-white">bekannten Sängers</span>
+      </p>
+      <p class="max-w-2xl mx-auto text-xl mb-12 leading-relaxed">
+        Wir organisieren ein großes Event und suchen starke Partner, die mit uns zusammen einen unvergesslichen Abend schaffen wollen.
+      </p>
+      <a href="#kontakt" 
+         class="inline-block btn-purple text-white text-2xl font-bold px-12 py-6 rounded-2xl">
+        JETZT SPONSOR WERDEN →
+      </a>
+      <p class="mt-10 text-sm text-gray-400">Plätze sind limitiert • Nur wenige Sponsoren möglich</p>
+    </div>
+  </header>
+
+  <!-- WARUM SPONSOR -->
+  <section class="py-20 bg-[#111]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 accent-cyan">Warum du dabei sein solltest</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#1a1a1a] p-8 rounded-2xl text-center border border-[#a85cff]/30">
+          <i class="fa-solid fa-users text-5xl accent-purple mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-3">Reichweite</h3>
+          <p class="text-gray-300">Dein Logo vor Hunderten Besuchern + starke Social-Media-Präsenz</p>
+        </div>
+        <div class="bg-[#1a1a1a] p-8 rounded-2xl text-center border border-[#a85cff]/30">
+          <i class="fa-solid fa-star text-5xl accent-purple mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-3">VIP-Status</h3>
+          <p class="text-gray-300">Exklusive Tickets, Backstage-Zugang und Meet & Greet mit dem Sänger</p>
+        </div>
+        <div class="bg-[#1a1a1a] p-8 rounded-2xl text-center border border-[#a85cff]/30">
+          <i class="fa-solid fa-handshake text-5xl accent-purple mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-3">Netzwerk</h3>
+          <p class="text-gray-300">Verbindung zu anderen Unternehmen und wichtigen Playern in der Szene</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAKETE -->
+  <section class="py-20 bg-[#0a0a0a]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 accent-cyan">Unsere Sponsoring-Pakete</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- GOLD -->
+        <div class="bg-[#1a1a1a] rounded-3xl p-8 border border-[#a85cff]">
+          <div class="accent-purple text-xl font-bold mb-2">GOLD</div>
+          <div class="text-5xl font-bold my-4">2.500 €</div>
+          <ul class="space-y-3 text-gray-300">
+            <li>✅ Großes Logo auf Bühne & Flyer</li>
+            <li>✅ 10 VIP-Tickets</li>
+            <li>✅ Backstage + Meet & Greet</li>
+            <li>✅ 2 Social-Media-Posts</li>
+            <li>✅ Logo auf allen Bannern & Website</li>
+          </ul>
+        </div>
+
+        <!-- SILVER -->
+        <div class="bg-[#1a1a1a] rounded-3xl p-8 border-2 border-[#5cf0ff] relative">
+          <div class="absolute -top-3 right-8 bg-[#5cf0ff] text-black text-xs font-bold px-5 py-1 rounded-full">BELIEBT</div>
+          <div class="accent-cyan text-xl font-bold mb-2">SILVER</div>
+          <div class="text-5xl font-bold my-4">1.200 €</div>
+          <ul class="space-y-3 text-gray-300">
+            <li>✅ Logo auf allen Bannern</li>
+            <li>✅ 4 VIP-Tickets</li>
+            <li>✅ Erwähnung auf Bühne</li>
+            <li>✅ Social-Media-Post + Story</li>
+            <li>✅ Logo auf Website</li>
+          </ul>
+        </div>
+
+        <!-- BRONZE -->
+        <div class="bg-[#1a1a1a] rounded-3xl p-8 border border-[#a85cff]/50">
+          <div class="accent-purple text-xl font-bold mb-2">BRONZE</div>
+          <div class="text-5xl font-bold my-4">600 €</div>
+          <ul class="space-y-3 text-gray-300">
+            <li>✅ Logo in Programm & Flyer</li>
+            <li>✅ 2 Tickets</li>
+            <li>✅ Social-Media Danksagung</li>
+            <li>✅ Erwähnung auf Website</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="py-20 bg-[#111]">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8 accent-purple">Werde jetzt Sponsor!</h2>
+      <form class="space-y-6 bg-[#1a1a1a] p-8 rounded-3xl">
+        <input type="text" placeholder="Firmenname" class="w-full bg-[#0a0a0a] border border-[#5cf0ff]/30 rounded-xl px-6 py-4 focus:border-[#5cf0ff]">
+        <input type="email" placeholder="E-Mail-Adresse" class="w-full bg-[#0a0a0a] border border-[#5cf0ff]/30 rounded-xl px-6 py-4 focus:border-[#5cf0ff]">
+        <input type="tel" placeholder="Telefon" class="w-full bg-[#0a0a0a] border border-[#5cf0ff]/30 rounded-xl px-6 py-4 focus:border-[#5cf0ff]">
+        <textarea placeholder="Welches Paket interessiert dich?" rows="4" class="w-full bg-[#0a0a0a] border border-[#5cf0ff]/30 rounded-xl px-6 py-4 focus:border-[#5cf0ff]"></textarea>
+        <button type="button" onclick="alert('Danke! Ich melde mich bald bei dir.')"
+                class="w-full btn-purple text-white font-bold text-xl py-6 rounded-2xl">
+          ANFRAGE SENDEN
+        </button>
+      </form>
+      <p class="mt-8 text-gray-400">
+        Oder direkt schreiben: <a href="mailto:bookings@tas-events.de" class="accent-cyan">bookings@tas-events.de</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="bg-[#111] py-10 text-center text-gray-400 text-sm">
+    © 2026 Tas-Events • Alle Rechte vorbehalten
+  </footer>
+</body>
+</html>

@@ -1,363 +1,126 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tas-Events & Bookings - Sponsoring-Möglichkeiten</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .flyer {
-            max-width: 800px;
-            width: 100%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #000000 0%, #333333 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 2;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .header .tagline {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 2;
-            opacity: 0.9;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            position: relative;
-            z-index: 2;
-            margin-top: 20px;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 15px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            min-width: 120px;
-        }
-
-        .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-
-        .content {
-            padding: 40px;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .section h2 {
-            color: #000000;
-            margin-bottom: 15px;
-            font-size: 1.8em;
-            border-bottom: 3px solid #ff6b6b;
-            padding-bottom: 10px;
-        }
-
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .benefit {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid #000000;
-        }
-
-        .benefit::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.5s ease;
-        }
-
-        .benefit:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .benefit:hover::before {
-            left: 100%;
-        }
-
-        .benefit h3 {
-            color: #000000;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-
-        .benefit p {
-            color: #555;
-            line-height: 1.5;
-        }
-
-        .contact-section {
-            background: linear-gradient(135deg, #000000 0%, #333333 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .contact-section h2 {
-            color: white;
-            border-bottom: 3px solid rgba(255,255,255,0.3);
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .contact-item {
-            background: rgba(255,255,255,0.1);
-            padding: 15px 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-
-        .contact-item strong {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 1.1em;
-        }
-
-        .cta {
-            background: #ff6b6b;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.2em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta:hover {
-            background: #ff5252;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255,107,107,0.3);
-        }
-
-        .highlight {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #ffffff;
-        }
-
-        .highlight h3 {
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .stats {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tas-Events | Sponsoren gesucht</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .hero-bg {
+      background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.95)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="flyer">
-        <div class="header">
-            <h1>TAS-EVENTS & BOOKINGS</h1>
-            <p class="tagline">Ihr Partner für unvergessliche Events</p>
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Gäste pro Event</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Professionalität</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Support</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="content">
-            <div class="section">
-                <h2>🎯 Warum Sponsoring bei uns?</h2>
-                <p>Erreichen Sie Ihre Zielgruppe bei unseren exklusiven Events mit bis zu 500 Gästen pro Veranstaltung. Wir bieten Ihnen die perfekte Plattform für Ihre Marken-Präsentation.</p>
-            </div>
-
-            <div class="highlight">
-                <h3>🚀 Ihre Vorteile auf einen Blick</h3>
-                <p>Maximale Sichtbarkeit, direkter Kundenkontakt und messbare Ergebnisse - das bieten wir Ihnen als Sponsor unserer Premium-Events!</p>
-            </div>
-
-            <div class="section">
-                <h2>💎 Unsere Sponsoring-Pakete</h2>
-                <div class="benefits">
-                    <div class="benefit">
-                        <h3>🥇 Premium-Paket</h3>
-                        <p>• Logo auf allen Werbematerialien<br>
-                        • Bühnen-Erwähnung<br>
-                        • Eigener Promotion-Stand<br>
-                        • Social Media Posts<br>
-                        • VIP-Bereich Zugang</p>
-                    </div>
-                    <div class="benefit">
-                        <h3>🥈 Standard-Paket</h3>
-                        <p>• Logo auf Flyern & Plakaten<br>
-                        • Erwähnung bei der Eröffnung<br>
-                        • Produktplatzierung möglich<br>
-                        • Social Media Story<br>
-                        • Event-Fotos mit Logo</p>
-                    </div>
-                    <div class="benefit">
-                        <h3>🥉 Basis-Paket</h3>
-                        <p>• Logo auf Eingangsbereich<br>
-                        • Flyer-Auslage möglich<br>
-                        • Namensnennung<br>
-                        • Event-Dokumentation<br>
-                        • Networking-Möglichkeiten</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>📊 Ihre Reichweite</h2>
-                <div class="benefits">
-                    <div class="benefit">
-                        <h3>📱 Social Media</h3>
-                        <p>Professionelle Foto- und Video-Dokumentation mit über 10.000 Impressions pro Event auf Instagram, Facebook und TikTok.</p>
-                    </div>
-                    <div class="benefit">
-                        <h3>🎪 Live-Event</h3>
-                        <p>Direkter Kontakt zu 500+ potenziellen Kunden in entspannter Party-Atmosphäre mit hoher Aufmerksamkeit.</p>
-                    </div>
-                    <div class="benefit">
-                        <h3>🌐 Online-Präsenz</h3>
-                        <p>Dauerhafte Sichtbarkeit auf unserer Website und in unseren digitalen Kanälen auch nach dem Event.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-section">
-                <h2>📞 Kontaktieren Sie uns jetzt!</h2>
-                <p>Lassen Sie uns gemeinsam Ihr nächstes erfolgreiches Sponsoring planen.</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <strong>✉️ E-Mail</strong>
-                        bookings@tas-events.de
-                    </div>
-                    <div class="contact-item">
-                        <strong>🌐 Website</strong>
-                        www.tas-events.de
-                    </div>
-                </div>
-                <button class="cta">Jetzt Sponsor werden!</button>
-            </div>
-        </div>
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Tas-Events" class="logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="kuenstler.html">Künstler</a>
+        <a href="sponsoring.html" class="active">Sponsoren</a>
+      </div>
     </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-bg">
+    <div class="container text-center">
+      <h1 class="neon-text">SPONSOREN GESUCHT!</h1>
+      <p class="subtitle">Für den exklusiven Auftritt eines <span class="highlight">bekannten Sängers</span></p>
+      <p class="description">Wir organisieren ein großes Event und suchen starke Partner.</p>
+      <a href="#kontakt" class="btn-primary">JETZT SPONSOR WERDEN →</a>
+    </div>
+  </header>
+
+  <!-- WHY -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Warum du dabei sein solltest</h2>
+      <div class="grid-3">
+        <div class="card">
+          <i class="fas fa-users"></i>
+          <h3>Reichweite</h3>
+          <p>Dein Logo vor Hunderten Besuchern + Social-Media-Posts</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-star"></i>
+          <h3>VIP-Status</h3>
+          <p>Exklusive Tickets, Backstage-Zugang und Meet & Greet</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-handshake"></i>
+          <h3>Netzwerk</h3>
+          <p>Verbindung zu anderen Unternehmen und Künstlern</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAKETE -->
+  <section class="section bg-dark">
+    <div class="container">
+      <h2 class="section-title">Unsere Sponsoring-Pakete</h2>
+      <div class="grid-3">
+        <div class="package-card">
+          <h3 class="gold">GOLD</h3>
+          <div class="price">2.500 €</div>
+          <ul>
+            <li>✅ Großes Logo auf Bühne</li>
+            <li>✅ 10 VIP-Tickets</li>
+            <li>✅ Backstage + Meet & Greet</li>
+            <li>✅ Social Media Promotion</li>
+          </ul>
+        </div>
+        <div class="package-card popular">
+          <h3 class="silver">SILVER</h3>
+          <div class="price">1.200 €</div>
+          <ul>
+            <li>✅ Logo auf Bannern</li>
+            <li>✅ 4 VIP-Tickets</li>
+            <li>✅ Erwähnung auf Bühne</li>
+            <li>✅ Social Media Post</li>
+          </ul>
+        </div>
+        <div class="package-card">
+          <h3 class="bronze">BRONZE</h3>
+          <div class="price">600 €</div>
+          <ul>
+            <li>✅ Logo im Programm</li>
+            <li>✅ 2 Tickets</li>
+            <li>✅ Social Media Danksagung</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="section">
+    <div class="container">
+      <h2 class="section-title">Werde jetzt Sponsor!</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Firmenname">
+        <input type="email" placeholder="E-Mail">
+        <input type="tel" placeholder="Telefon">
+        <textarea placeholder="Nachricht / Gewünschtes Paket"></textarea>
+        <button type="button" onclick="alert('Danke! Ich melde mich bald bei dir. bookings@tas-events.de')" class="btn-primary">ANFRAGE SENDEN</button>
+      </form>
+      <p class="text-center mt-4">Oder direkt: <a href="mailto:bookings@tas-events.de">bookings@tas-events.de</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Tas-Events</p>
+  </footer>
 </body>
 </html>

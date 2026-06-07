@@ -3,68 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tas-Events | Events & Bookings</title>
+  <title>Tas-Events | Sponsoren gesucht</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body { background-color: #0a0a0a; color: #fff; font-family: Arial, sans-serif; }
     .accent-purple { color: #a85cff; }
     .accent-cyan { color: #5cf0ff; }
-    .hero-bg { 
-      background: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.85)), 
-                  url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat; 
+    .hero-bg {
+      background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.95)),
+                  url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
     }
-    .neon-purple { text-shadow: 0 0 15px #a85cff, 0 0 25px #5cf0ff; }
+    .neon-purple { text-shadow: 0 0 12px #a85cff, 0 0 20px #5cf0ff; }
+    .btn-purple {
+      background: #a85cff;
+      box-shadow: 0 0 15px #a85cff;
+    }
+    .btn-purple:hover {
+      background: #5cf0ff;
+      box-shadow: 0 0 20px #5cf0ff;
+      color: #000;
+    }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="bg-[#111] py-5 border-b border-[#5cf0ff]/30 fixed w-full z-50">
+  <!-- NAV -->
+  <nav class="bg-[#111] py-4 border-b border-[#5cf0ff]/30">
     <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
       <div class="text-2xl font-bold accent-purple">Tas-Events</div>
-      <div class="flex gap-8 text-sm font-medium">
+      <div class="flex gap-8 text-sm">
         <a href="index.html" class="hover:accent-cyan">Home</a>
         <a href="#" class="hover:accent-cyan">Events</a>
         <a href="#" class="hover:accent-cyan">Künstler</a>
         <a href="sponsoring.html" class="accent-cyan font-bold">Sponsoren</a>
-        <a href="#" class="hover:accent-cyan">Kontakt</a>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header class="hero-bg h-screen flex items-center pt-20">
+  <header class="hero-bg h-screen flex items-center">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <h1 class="text-6xl md:text-7xl font-bold mb-6 neon-purple">TAS-EVENTS</h1>
-      <p class="text-3xl md:text-4xl accent-cyan mb-8">Professionelles Event-Management & Künstler-Bookings</p>
-      <p class="max-w-2xl mx-auto text-xl mb-12">Wir organisieren unvergessliche Events mit Top-Künstlern.</p>
-      <div class="flex gap-6 justify-center">
-        <a href="sponsoring.html" class="inline-block bg-[#a85cff] hover:bg-[#5cf0ff] text-black font-bold text-xl px-10 py-5 rounded-xl transition">
-          Sponsoren werden
-        </a>
-        <a href="#" class="inline-block border-2 border-[#5cf0ff] hover:bg-[#5cf0ff] hover:text-black font-bold text-xl px-10 py-5 rounded-xl transition">
-          Jetzt Event anfragen
-        </a>
-      </div>
+      <h1 class="text-6xl md:text-7xl font-bold mb-4 neon-purple">SPONSOREN GESUCHT!</h1>
+      <p class="text-3xl md:text-4xl accent-cyan mb-8">Für den exklusiven Auftritt eines bekannten Sängers</p>
+      <p class="max-w-2xl mx-auto text-xl mb-12">Wir organisieren ein großes Event und suchen starke Partner, die mit uns zusammen einen unvergesslichen Abend schaffen wollen.</p>
+      <a href="#kontakt" class="inline-block btn-purple text-white text-2xl font-bold px-12 py-6 rounded-xl transition">JETZT SPONSOR WERDEN →</a>
+      <p class="mt-8 text-sm text-gray-400">Plätze sind limitiert • Nur wenige Sponsoren möglich</p>
     </div>
   </header>
 
-  <!-- Weitere Abschnitte können später ergänzt werden -->
+  <!-- WARUM -->
   <section class="py-20 bg-[#111]">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold accent-cyan mb-8">Bereit für dein nächstes großes Event?</h2>
-      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-        Kontaktiere uns für Buchungen, Event-Organisation oder Sponsoring-Möglichkeiten.
-      </p>
-      <a href="mailto:bookings@tas-events.de" class="mt-10 inline-block bg-[#5cf0ff] text-black font-bold px-8 py-4 rounded-xl">
-        bookings@tas-events.de
-      </a>
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 accent-cyan">Warum du dabei sein solltest</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#1a1a1a] p-8 rounded-2xl text-center border border-[#a85cff]/30">
+          <i class="fa-solid fa-users text-5xl accent-purple mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">Reichweite</h3>
+          <p class="text-gray-300">Dein Logo vor Hunderten Besuchern + Social-Media-Posts</p>
+        </div>
+        <div class="bg-[#1a1a1a] p-8 rounded-2xl text-center border border-[#5cf0ff] relative">
+          <div class="absolute -top-3 right-6 bg-[#5cf0ff] text-black text-xs font-bold px-4 py-1 rounded-full">VIP</div>
+          <i class="fa-solid fa-star text-5xl accent-cyan mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">VIP-Status</h3>
+          <p class="text-gray-300">Exklusive Tickets, Backstage-Zugang und persönliches Treffen mit dem Sänger</p>
+        </div>
+        <div class="bg-[#1a1a1a] p-8 rounded-2xl text-center border border-[#a85cff]/30">
+          <i class="fa-solid fa-handshake text-5xl accent-purple mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">Netzwerk</h3>
+          <p class="text-gray-300">Verbindung zu anderen Unternehmen und Künstlern in der Szene</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="bg-[#111] py-10 text-center text-gray-400 text-sm">
-    © 2026 Tas-Events • Events | Management | Bookings
+  <!-- PAKETE -->
+  <section class="py-20 bg-[#0a0a0a]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 accent-cyan">Unsere Sponsoring-Pakete</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#1a1a1a] rounded-3xl p-8 border border-[#a85cff]">
+          <div class="accent-purple text-xl font-bold">GOLD</div>
+          <div class="text-5xl font-bold my-4">2.500 €</div>
+          <ul class="space-y-3 text-gray-300">
+            <li>✅ Großes Logo auf Bühne & Flyer</li>
+            <li>✅ 10 VIP-Tickets</li>
+            <li>✅ Backstage-Zugang</li>
+            <li>✅ Social-Media-Story + Post (2x)</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1a] rounded-3xl p-8 border-2 border-[#5cf0ff] relative">
+          <div class="absolute -top-3 right-6 bg-[#5cf0ff] text-black text-xs font-bold px-4 py-1 rounded-full">BELIEBT</div>
+          <div class="accent-cyan text-xl font-bold">SILVER</div>
+          <div class="text-5xl font-bold my-4">1.200 €</div>
+          <ul class="space-y-3 text-gray-300">
+            <li>✅ Logo auf allen Bannern</li>
+            <li>✅ 4 VIP-Tickets</li>
+            <li>✅ Erwähnung auf Bühne</li>
+            <li>✅ Social-Media-Post + Story</li>
+          </ul>
+        </div>
+        <div class="bg-[#1a1a1a] rounded-3xl p-8 border border-[#a85cff]/50">
+          <div class="accent-purple text-xl font-bold">BRONZE</div>
+          <div class="text-5xl font-bold my-4">600 €</div>
+          <ul class="space-y-3 text-gray-300">
+            <li>✅ Logo in Event-Programm & Flyer</li>
+            <li>✅ 2 Tickets</li>
+            <li>✅ Danksagung auf Social Media</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="py-20 bg-[#111]">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-8 accent-purple">Werde jetzt Sponsor!</h2>
+      <form class="space-y-6">
+        <input type="text" placeholder="Dein Firmenname" class="w-full bg-[#1a1a1a] border border-[#5cf0ff]/30 rounded-xl px-6 py-4 text-lg">
+        <input type="email" placeholder="Deine E-Mail-Adresse" class="w-full bg-[#1a1a1a] border border-[#5cf0ff]/30 rounded-xl px-6 py-4 text-lg">
+        <input type="tel" placeholder="Telefonnummer" class="w-full bg-[#1a1a1a] border border-[#5cf0ff]/30 rounded-xl px-6 py-4 text-lg">
+        <textarea placeholder="Welches Paket interessiert dich? Oder eigene Wünsche..." rows="4" class="w-full bg-[#1a1a1a] border border-[#5cf0ff]/30 rounded-xl px-6 py-4 text-lg"></textarea>
+        <button type="button" onclick="alert('Vielen Dank! Ich melde mich gleich bei dir. bookings@tas-events.de')" class="w-full btn-purple text-white font-bold text-xl py-6 rounded-2xl transition">
+          JETZT SPONSORANFRAGE SENDEN
+        </button>
+      </form>
+      <p class="text-center text-gray-400 mt-6">Oder direkt schreiben: <a href="mailto:bookings@tas-events.de" class="accent-cyan">bookings@tas-events.de</a></p>
+    </div>
+  </section>
+
+  <footer class="bg-[#111] py-8 text-center text-gray-400 text-sm">
+    © 2026 Tas-Events • Sponsoren gesucht für den Auftritt eines bekannten Sängers
   </footer>
 </body>
 </html>

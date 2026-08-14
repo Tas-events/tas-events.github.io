@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAS-EVENTS & BOOKINGS | Star Bookings, DJs, Hochzeiten & Party Events</title>
-    <!-- Google Fonts für den Cyber-Neon-Look -->
+    <!-- Google Fonts & FontAwesome Icons für das WhatsApp-Logo -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
@@ -13,6 +14,7 @@
             --card-bg: #0d0e17;
             --neon-cyan: #00d2ff;
             --neon-pink: #f000ff;
+            --neon-green: #25D366; /* WhatsApp Grün */
             --text-color: #ffffff;
             --text-dim: #a5abcb;
             --gradient: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
@@ -75,13 +77,14 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 20px;
+            align-items: center;
         }
 
         nav a {
             color: var(--text-color);
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -144,10 +147,18 @@
             line-height: 1.6;
         }
 
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 1;
+        }
+
         .btn-neon {
-            padding: 16px 40px;
+            padding: 16px 35px;
             font-family: 'Orbitron', sans-serif;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 800;
             color: #fff;
             background: transparent;
@@ -156,18 +167,28 @@
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 2px;
-            position: relative;
-            z-index: 1;
             box-shadow: 0 0 20px rgba(240, 0, 255, 0.4);
             transition: 0.3s ease;
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .btn-neon:hover {
             background: var(--neon-pink);
             box-shadow: 0 0 35px var(--neon-pink);
             transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background: var(--neon-green);
+            box-shadow: 0 0 35px var(--neon-green);
         }
 
         /* MUSIC & GENRES BANNER */
@@ -198,7 +219,7 @@
             letter-spacing: 1px;
         }
 
-        /* SERVICES SECTION (PERFEKTES 3x2 RASTER) */
+        /* SERVICES SECTION */
         .services {
             padding: 90px 5%;
             background: var(--bg-color);
@@ -220,7 +241,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Genau 3 Karten pro Reihe auf PCs */
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
@@ -253,39 +274,81 @@
             line-height: 1.6;
         }
 
-        /* HIGHLIGHT TEXT BLOCK */
-        .highlight-box {
-            margin: 60px 5%;
-            padding: 40px;
-            background: linear-gradient(135deg, rgba(0,210,255,0.05), rgba(240,0,255,0.05));
-            border: 1px solid var(--neon-cyan);
-            border-radius: 15px;
+        /* SPONSOREN BEREICH */
+        .sponsor-box {
+            margin: 70px 5%;
+            padding: 45px;
+            background: linear-gradient(135deg, rgba(240, 0, 255, 0.08), rgba(0, 210, 255, 0.08));
+            border: 2px solid var(--neon-pink);
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 0 25px rgba(0,210,255,0.15);
+            box-shadow: 0 0 30px rgba(240, 0, 255, 0.2);
+            position: relative;
         }
 
-        .highlight-box h3 {
+        .sponsor-box h3 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             color: #fff;
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
-        .highlight-box p {
-            font-size: 1.2rem;
+        .sponsor-box h3 span {
+            color: var(--neon-pink);
+            text-shadow: 0 0 10px var(--neon-pink);
+        }
+
+        .sponsor-box p {
+            font-size: 1.25rem;
             color: var(--text-dim);
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 850px;
+            margin: 0 auto 30px;
             line-height: 1.7;
         }
 
-        /* KONTAKT / ANFRAGE FORMULAR */
+        /* KONTAKT & FORMULAR */
         .booking-form {
             padding: 90px 5%;
             background: #090a10;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        .contact-info-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .contact-card {
+            background: #121420;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            padding: 20px 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .contact-card i {
+            font-size: 1.5rem;
+            color: var(--neon-cyan);
+        }
+
+        .contact-card:hover {
+            border-color: var(--neon-pink);
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(240, 0, 255, 0.3);
         }
 
         form {
@@ -323,16 +386,16 @@
             font-size: 0.95rem;
         }
 
-        /* RESPONSIVE DESIGN (Für Tablets und Handys) */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 992px) {
-            .services-grid { grid-template-columns: repeat(2, 1fr); } /* 2 Karten pro Reihe auf Tablets */
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
             .hero-title { font-size: 2.2rem; }
             .hero-subtitle { font-size: 1.1rem; }
             nav { display: none; }
-            .services-grid { grid-template-columns: 1fr; } /* 1 Karte pro Reihe auf Handys */
+            .services-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -348,8 +411,8 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#genres">Musik & Artists</a></li>
-                <li><a href="#booking">Anfrage</a></li>
+                <li><a href="#sponsoring">Sponsoring</a></li>
+                <li><a href="#booking">Anfrage / Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -358,9 +421,14 @@
     <section class="hero" id="home">
         <h1 class="hero-title">Unvergessliche Nächte & <span>Exklusive Events</span></h1>
         <p class="hero-subtitle">
-            Wir machen deine Events legendär! Egal ob gigantische Club-Partys, exklusive VIP-Nächte, Star-Bookings aus aller Welt oder traumhafte Hochzeiten – wir bringen die besten Artists, den besten Sound und ein unvergessliches Erlebnis auf dein Event.
+            Wir machen deine Events legendär! Egal ob gigantische Club-Partys, exklusive VIP-Nächte, Star-Bookings aus aller Welt oder traumhafte Hochzeiten – wir bringen die besten Artists, den besten Sound und ein unvergessliches Erlebnis.
         </p>
-        <a href="#booking" class="btn-neon">Jetzt Event Anfragen</a>
+        <div class="btn-group">
+            <a href="#booking" class="btn-neon">Event Anfragen</a>
+            <a href="https://wa.me/4915123832711" target="_blank" class="btn-neon btn-whatsapp">
+                <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> WhatsApp Chat
+            </a>
+        </div>
     </section>
 
     <!-- GENRES BANNER -->
@@ -376,7 +444,7 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION (GENAU 6 KARTEN IN 2 DREIER-REIHEN) -->
+    <!-- SERVICES SECTION -->
     <section class="services" id="services">
         <h2 class="section-title">Unsere <span>Performance & Services</span></h2>
         
@@ -415,36 +483,67 @@
         </div>
     </section>
 
-    <!-- HIGHLIGHT TEXT BOX -->
-    <div class="highlight-box">
-        <h3>Egal welches Event – Wir bringen die Stars & die Energie!</h3>
-        <p>
-            Egal ob du eine spektakuläre Club-Nacht veranstaltest, einen türkischen oder US-Künstler auf deine Bühne holen willst, einen deutschen Rap-Star buchen möchtest oder eine Traumhochzeit planst – <strong>TAS-EVENTS & BOOKINGS</strong> steht für Qualität, Exklusivität und unvergessliche Erlebnisse.
-        </p>
-    </div>
+    <!-- SPONSOREN BEREICH -->
+    <section id="sponsoring">
+        <div class="sponsor-box">
+            <h3>Werde <span>Sponsor</span> & Partner!</h3>
+            <p>
+                Du möchtest dein Unternehmen, deine Marke oder deine Produkte auf unseren exklusiven Partys, Festivals und Groß-Events präsentieren? Wir bieten perfekte Werbeflächen, VIP-Branding und direkte Reichweite bei einem feierfreudigen Publikum. Wir freuen uns riesig auf deine Partner-Anfrage!
+            </p>
+            <a href="#booking" class="btn-neon">Jetzt Sponsoring Anfragen</a>
+        </div>
+    </section>
 
-    <!-- ANFRAGE FORMULAR -->
+    <!-- KONTAKT & ANFRAGE FORMULAR -->
     <section class="booking-form" id="booking">
-        <h2 class="section-title">Unverbindliche <span>Event-Anfrage</span></h2>
+        <h2 class="section-title">Direkter <span>Kontakt & Anfrage</span></h2>
         
+        <!-- DIREKTE KONTAKT-BOTSCHAFTEN -->
+        <div class="contact-info-container">
+            <a href="https://wa.me/4915123832711" target="_blank" class="contact-card" style="border-color: var(--neon-green);">
+                <i class="fab fa-whatsapp" style="color: var(--neon-green);"></i>
+                <div>
+                    <strong style="display:block; font-size:0.85rem; color:var(--text-dim);">WhatsApp Direct</strong>
+                    0151 23832711
+                </div>
+            </a>
+
+            <a href="mailto:bookings@tas-events.de" class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <strong style="display:block; font-size:0.85rem; color:var(--text-dim);">Booking Mail</strong>
+                    bookings@tas-events.de
+                </div>
+            </a>
+
+            <a href="mailto:taskin-tas@outlook.com" class="contact-card">
+                <i class="fas fa-paper-plane"></i>
+                <div>
+                    <strong style="display:block; font-size:0.85rem; color:var(--text-dim);">Persönlich / Info</strong>
+                    taskin-tas@outlook.com
+                </div>
+            </a>
+        </div>
+
         <form action="https://formspree.io/f/DEINE_EMAIL_HIER" method="POST">
-            <input type="text" name="name" placeholder="Dein Name / Firmenname / Veranstalter" required>
+            <input type="text" name="name" placeholder="Dein Name / Firmenname / Sponsor" required>
             <input type="email" name="email" placeholder="Deine E-Mail Adresse" required>
             <input type="tel" name="phone" placeholder="Telefonnummer / WhatsApp" required>
             
             <select name="service" required>
-                <option value="" disabled selected>Was planst du?</option>
-                <option value="Club Party / DJ Booking">Club Party / Diskothek / DJ Booking</option>
-                <option value="Star Booking (TR / US / DE Rap)">Star Booking (Türkisch, US-Rap, DE-Rap Stars)</option>
-                <option value="Hochzeit / Wedding Planner">Traumhochzeit / Wedding Planning</option>
-                <option value="VIP Gala / Firmentevent">VIP Gala / Firmenevent / Privat-Party</option>
+                <option value="" disabled selected>Was ist dein Anliegen?</option>
+                <option value="Sponsoring / Partner-Anfrage">🤝 Sponsoring & Festival-Partnerschaft</option>
+                <option value="Club Party / DJ Booking">Party, Club & DJ Booking</option>
+                <option value="Star Booking (TR / US / DE Rap)">Star Booking (TR / US / DE Stars)</option>
+                <option value="Hochzeit / Wedding Planner">Traumhochzeit & Wedding Planning</option>
+                <option value="VIP Gala / Firmentevent">VIP Gala / Firmenevent</option>
             </select>
             
-            <input type="text" name="date_location" placeholder="Wann & wo soll das Event stattfinden? (Datum, Stadt)" required>
+            <input type="text" name="date_location" placeholder="Wann & wo soll das Event stattfinden? (Falls bekannt)" required>
             
-            <textarea name="message" rows="5" placeholder="Beschreibe deine Wünsche (z. B. gewünschte Künstler/Stars, Gästeanzahl, Musikrichtung, Budget...)" required></textarea>
+            <textarea name="message" rows="5" placeholder="Deine Nachricht an uns (z. B. Sponsoring-Ideen, gewünschte Künstler, Gästeanzahl, Budget...)" required></textarea>
             
-            <button type="submit" class="btn-neon">Jetzt Anfrage Absenden</button>
+            <button type="submit" class="btn-neon">Jetzt Nachricht Absenden</button>
         </form>
     </section>
 

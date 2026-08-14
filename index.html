@@ -525,13 +525,13 @@
             </a>
         </div>
 
-        <!-- FORMULAR MIT INTEGRIERTEM FORMINIT LINK -->
+        <!-- FORMULAR MIT FORMINIT BLOCK-KEYS -->
         <form action="https://forminit.com/f/rnpir45l23i" method="POST">
-            <input type="text" name="name" placeholder="Dein Name / Firmenname / Sponsor" required>
-            <input type="email" name="email" placeholder="Deine E-Mail Adresse" required>
-            <input type="tel" name="phone" placeholder="Telefonnummer / WhatsApp" required>
+            <input type="text" name="fi-sender-fullName" placeholder="Dein Name / Firmenname / Sponsor" required>
+            <input type="email" name="fi-sender-email" placeholder="Deine E-Mail Adresse" required>
+            <input type="tel" name="fi-sender-phone" placeholder="Telefonnummer / WhatsApp" required>
             
-            <select name="service" required>
+            <select name="fi-data-service" required>
                 <option value="" disabled selected>Was ist dein Anliegen?</option>
                 <option value="Sponsoring / Partner-Anfrage">🤝 Sponsoring & Festival-Partnerschaft</option>
                 <option value="Club Party / DJ Booking">Party, Club & DJ Booking</option>
@@ -540,9 +540,9 @@
                 <option value="VIP Gala / Firmentevent">VIP Gala / Firmenevent</option>
             </select>
             
-            <input type="text" name="date_location" placeholder="Wann & wo soll das Event stattfinden? (Falls bekannt)" required>
+            <input type="text" name="fi-data-date_location" placeholder="Wann & wo soll das Event stattfinden? (Falls bekannt)" required>
             
-            <textarea name="message" rows="5" placeholder="Deine Nachricht an uns (z. B. Sponsoring-Ideen, gewünschte Künstler, Gästeanzahl, Budget...)" required></textarea>
+            <textarea name="fi-text-message" rows="5" placeholder="Deine Nachricht an uns (z. B. Sponsoring-Ideen, gewünschte Künstler, Gästeanzahl, Budget...)" required></textarea>
             
             <button type="submit" class="btn-neon">Jetzt Nachricht Absenden</button>
         </form>

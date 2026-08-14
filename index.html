@@ -173,7 +173,8 @@
         /* MUSIC & GENRES BANNER */
         .genres-banner {
             background: #090a12;
-            border-y: 1px solid rgba(0, 210, 255, 0.2);
+            border-top: 1px solid rgba(0, 210, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 210, 255, 0.2);
             padding: 25px 5%;
             text-align: center;
         }
@@ -197,7 +198,7 @@
             letter-spacing: 1px;
         }
 
-        /* SERVICES SECTION */
+        /* SERVICES SECTION (PERFEKTES 3x2 RASTER) */
         .services {
             padding: 90px 5%;
             background: var(--bg-color);
@@ -219,7 +220,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr); /* Genau 3 Karten pro Reihe auf PCs */
             gap: 30px;
         }
 
@@ -240,7 +241,7 @@
 
         .service-card h3 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--neon-pink);
             margin-bottom: 15px;
             text-transform: uppercase;
@@ -248,7 +249,7 @@
 
         .service-card p {
             color: var(--text-dim);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.6;
         }
 
@@ -322,10 +323,16 @@
             font-size: 0.95rem;
         }
 
+        /* RESPONSIVE DESIGN (Für Tablets und Handys) */
+        @media (max-width: 992px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); } /* 2 Karten pro Reihe auf Tablets */
+        }
+
         @media (max-width: 768px) {
             .hero-title { font-size: 2.2rem; }
             .hero-subtitle { font-size: 1.1rem; }
             nav { display: none; }
+            .services-grid { grid-template-columns: 1fr; } /* 1 Karte pro Reihe auf Handys */
         }
     </style>
 </head>
@@ -334,7 +341,6 @@
     <!-- NAVIGATION & LOGO -->
     <header>
         <div class="logo-container">
-            <!-- DEIN EXAKTER LOGO-LINK DIREKT EINGEBAUT -->
             <img src="https://github.com/Tas-events/tas-events.github.io/blob/main/images/logo.png?raw=true" alt="TAS-EVENTS Logo" class="logo-img">
             <div class="logo-text">TAS-EVENTS & BOOKINGS</div>
         </div>
@@ -370,7 +376,7 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
+    <!-- SERVICES SECTION (GENAU 6 KARTEN IN 2 DREIER-REIHEN) -->
     <section class="services" id="services">
         <h2 class="section-title">Unsere <span>Performance & Services</span></h2>
         

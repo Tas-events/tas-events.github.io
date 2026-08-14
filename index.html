@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAS-EVENTS & BOOKINGS | Star Bookings, DJs, Hochzeiten & Party Events</title>
-    <!-- Google Fonts & FontAwesome Icons für das WhatsApp-Logo -->
+    <!-- Google Fonts & FontAwesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -14,544 +14,108 @@
             --card-bg: #0d0e17;
             --neon-cyan: #00d2ff;
             --neon-pink: #f000ff;
-            --neon-green: #25D366; /* WhatsApp Grün */
+            --neon-green: #25D366;
             --text-color: #ffffff;
             --text-dim: #a5abcb;
             --gradient: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Rajdhani', sans-serif;
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Rajdhani', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
+        /* HEADER */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: rgba(6, 6, 9, 0.95); backdrop-filter: blur(12px); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(240, 0, 255, 0.25); }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo-img { height: 55px; width: 55px; border-radius: 50%; box-shadow: 0 0 15px var(--neon-pink); object-fit: cover; }
+        .logo-text { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; letter-spacing: 2px; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { color: var(--text-color); text-decoration: none; font-size: 1rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: var(--neon-cyan); }
 
-        /* HEADER & NAVIGATION */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            background: rgba(6, 6, 9, 0.95);
-            backdrop-filter: blur(12px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(240, 0, 255, 0.25);
-        }
+        /* HERO */
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 20px 60px; background: radial-gradient(circle at center, #1a0033 0%, var(--bg-color) 75%); }
+        .hero-title { font-family: 'Orbitron', sans-serif; font-size: 3.2rem; font-weight: 900; text-transform: uppercase; margin-bottom: 20px; line-height: 1.2; }
+        .hero-title span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { font-size: 1.4rem; color: var(--text-dim); max-width: 850px; margin-bottom: 35px; }
+        .btn-neon { padding: 16px 35px; font-family: 'Orbitron', sans-serif; font-size: 0.95rem; font-weight: 800; color: #fff; background: transparent; border: 2px solid var(--neon-pink); border-radius: 30px; cursor: pointer; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-neon:hover { background: var(--neon-pink); box-shadow: 0 0 35px var(--neon-pink); }
+        .btn-whatsapp { border-color: var(--neon-green); }
+        .btn-whatsapp:hover { background: var(--neon-green); box-shadow: 0 0 35px var(--neon-green); }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-img {
-            height: 55px;
-            width: 55px;
-            border-radius: 50%;
-            box-shadow: 0 0 15px var(--neon-pink);
-            object-fit: cover;
-        }
-
-        .logo-text {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 800;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-            align-items: center;
-        }
-
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--neon-cyan);
-            text-shadow: 0 0 10px var(--neon-cyan);
-        }
-
-        /* HERO SECTION */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 120px 20px 60px;
-            background: radial-gradient(circle at center, #1a0033 0%, var(--bg-color) 75%);
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            background: var(--gradient);
-            filter: blur(160px);
-            opacity: 0.35;
-            z-index: 0;
-        }
-
-        .hero-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.2rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            z-index: 1;
-            line-height: 1.2;
-            text-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
-        }
-
-        .hero-title span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-subtitle {
-            font-size: 1.4rem;
-            color: var(--text-dim);
-            max-width: 850px;
-            margin-bottom: 35px;
-            z-index: 1;
-            line-height: 1.6;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            z-index: 1;
-        }
-
-        .btn-neon {
-            padding: 16px 35px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 800;
-            color: #fff;
-            background: transparent;
-            border: 2px solid var(--neon-pink);
-            border-radius: 30px;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 0 0 20px rgba(240, 0, 255, 0.4);
-            transition: 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-neon:hover {
-            background: var(--neon-pink);
-            box-shadow: 0 0 35px var(--neon-pink);
-            transform: translateY(-3px);
-        }
-
-        .btn-whatsapp {
-            border-color: var(--neon-green);
-            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
-        }
-
-        .btn-whatsapp:hover {
-            background: var(--neon-green);
-            box-shadow: 0 0 35px var(--neon-green);
-        }
-
-        /* MUSIC & GENRES BANNER */
-        .genres-banner {
-            background: #090a12;
-            border-top: 1px solid rgba(0, 210, 255, 0.2);
-            border-bottom: 1px solid rgba(0, 210, 255, 0.2);
-            padding: 25px 5%;
-            text-align: center;
-        }
-
-        .genre-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .tag {
-            background: rgba(240, 0, 255, 0.1);
-            border: 1px solid var(--neon-pink);
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--neon-cyan);
-            letter-spacing: 1px;
-        }
-
-        /* SERVICES SECTION */
-        .services {
-            padding: 90px 5%;
-            background: var(--bg-color);
-        }
-
-        .section-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .section-title span {
-            color: var(--neon-cyan);
-            text-shadow: 0 0 10px var(--neon-cyan);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 210, 255, 0.15);
-            border-radius: 15px;
-            padding: 35px;
-            transition: 0.4s;
-            position: relative;
-        }
-
-        .service-card:hover {
-            border-color: var(--neon-pink);
-            transform: translateY(-8px);
-            box-shadow: 0 0 30px rgba(240, 0, 255, 0.25);
-        }
-
-        .service-card h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.4rem;
-            color: var(--neon-pink);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .service-card p {
-            color: var(--text-dim);
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }
-
-        /* SPONSOREN BEREICH */
-        .sponsor-box {
-            margin: 70px 5%;
-            padding: 45px;
-            background: linear-gradient(135deg, rgba(240, 0, 255, 0.08), rgba(0, 210, 255, 0.08));
-            border: 2px solid var(--neon-pink);
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 0 30px rgba(240, 0, 255, 0.2);
-            position: relative;
-        }
-
-        .sponsor-box h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            color: #fff;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .sponsor-box h3 span {
-            color: var(--neon-pink);
-            text-shadow: 0 0 10px var(--neon-pink);
-        }
-
-        .sponsor-box p {
-            font-size: 1.25rem;
-            color: var(--text-dim);
-            max-width: 850px;
-            margin: 0 auto 30px;
-            line-height: 1.7;
-        }
-
-        /* KONTAKT & FORMULAR */
-        .booking-form {
-            padding: 90px 5%;
-            background: #090a10;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .contact-info-container {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 40px;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        .contact-card {
-            background: #121420;
-            border: 1px solid rgba(0, 210, 255, 0.2);
-            padding: 20px 25px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.1rem;
-            transition: 0.3s;
-        }
-
-        .contact-card i {
-            font-size: 1.5rem;
-            color: var(--neon-cyan);
-        }
-
-        .contact-card:hover {
-            border-color: var(--neon-pink);
-            transform: translateY(-3px);
-            box-shadow: 0 0 15px rgba(240, 0, 255, 0.3);
-        }
-
-        form {
-            width: 100%;
-            max-width: 650px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 16px;
-            background: #121420;
-            border: 1px solid rgba(240, 0, 255, 0.3);
-            border-radius: 8px;
-            color: #fff;
-            font-size: 1.05rem;
-            outline: none;
-            transition: 0.3s;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            border-color: var(--neon-cyan);
-            box-shadow: 0 0 12px rgba(0, 210, 255, 0.5);
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #040406;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            color: var(--text-dim);
-            font-size: 0.95rem;
-        }
-
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 992px) {
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.2rem; }
-            .hero-subtitle { font-size: 1.1rem; }
-            nav { display: none; }
-            .services-grid { grid-template-columns: 1fr; }
-        }
+        /* KONTAKT & FORM */
+        .booking-form { padding: 90px 5%; background: #090a10; display: flex; flex-direction: column; align-items: center; }
+        .section-title { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 50px; text-transform: uppercase; }
+        .section-title span { color: var(--neon-cyan); }
+        .contact-info-container { display: flex; gap: 25px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; width: 100%; max-width: 800px; }
+        .contact-card { background: #121420; border: 1px solid rgba(0, 210, 255, 0.2); padding: 20px 25px; border-radius: 12px; display: flex; align-items: center; gap: 15px; text-decoration: none; color: #fff; transition: 0.3s; }
+        .contact-card:hover { border-color: var(--neon-pink); }
+        
+        form { width: 100%; max-width: 650px; display: flex; flex-direction: column; gap: 20px; }
+        input, select, textarea { width: 100%; padding: 16px; background: #121420; border: 1px solid rgba(240, 0, 255, 0.3); border-radius: 8px; color: #fff; font-size: 1.05rem; }
+        input:focus, select:focus, textarea:focus { border-color: var(--neon-cyan); }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION & LOGO -->
     <header>
         <div class="logo-container">
-            <img src="https://github.com/Tas-events/tas-events.github.io/blob/main/images/logo.png?raw=true" alt="TAS-EVENTS Logo" class="logo-img">
+            <img src="https://github.com/Tas-events/tas-events.github.io/blob/main/images/logo.png?raw=true" alt="Logo" class="logo-img">
             <div class="logo-text">TAS-EVENTS & BOOKINGS</div>
         </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#sponsoring">Sponsoring</a></li>
-                <li><a href="#booking">Anfrage / Kontakt</a></li>
+                <li><a href="#booking">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero" id="home">
         <h1 class="hero-title">Unvergessliche Nächte & <span>Exklusive Events</span></h1>
-        <p class="hero-subtitle">
-            Wir machen deine Events legendär! Egal ob gigantische Club-Partys, exklusive VIP-Nächte, Star-Bookings aus aller Welt oder traumhafte Hochzeiten – wir bringen die besten Artists, den besten Sound und ein unvergessliches Erlebnis.
-        </p>
-        <div class="btn-group">
+        <p class="hero-subtitle">Wir machen deine Events legendär! Buche jetzt Artists, DJs oder plan dein Event mit uns.</p>
+        <div style="display: flex; gap: 15px; justify-content: center;">
             <a href="#booking" class="btn-neon">Event Anfragen</a>
             <a href="https://wa.me/4915123832711" target="_blank" class="btn-neon btn-whatsapp">
-                <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> WhatsApp Chat
+                <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> WhatsApp
             </a>
         </div>
     </section>
 
-    <!-- GENRES BANNER -->
-    <section class="genres-banner" id="genres">
-        <h3 style="font-family: 'Orbitron'; font-size: 1.2rem; color: #fff; text-transform: uppercase;">Unsere Musik- & Artist-Spezialisierungen:</h3>
-        <div class="genre-tags">
-            <span class="tag">Türkisch Pop & Rap</span>
-            <span class="tag">US Hip-Hop & Trap</span>
-            <span class="tag">Deutscher Rap & Urban</span>
-            <span class="tag">Exklusive Club-DJs</span>
-            <span class="tag">Live-Performances & Stars</span>
-            <span class="tag">Wedding & Gala Sound</span>
-        </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section class="services" id="services">
-        <h2 class="section-title">Unsere <span>Performance & Services</span></h2>
-        
-        <div class="services-grid">
-            
-            <div class="service-card">
-                <h3>Partys, Clubs & Unvergessliche Nächte</h3>
-                <p>Von vollen Clubs bis zu spektakulären Partys: Wir liefern fette Bässe, exklusive Club-DJs, High-End Lichttechnik und eine Atmosphäre, die keiner so schnell vergisst. Deine Gäste feiern durch bis zum Morgen!</p>
-            </div>
-
-            <div class="service-card">
-                <h3>International Star Bookings</h3>
-                <p>Direkter Draht zu hochkarätigen Künstlern! Egal ob bekannte <strong>Türkische Stars</strong>, angesagte <strong>US-Rap-Giganten</strong> oder die bekanntesten Gesichter aus dem <strong>deutschen Rap & Hip-Hop</strong> – wir buchen die Live-Acts für dein Event.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Hochzeitsplaner & Wedding Design</h3>
-                <p>Dein schönster Tag im Leben verdient Perfektion. Als erfahrene Hochzeitsplaner übernehmen wir die komplette Organisation, Live-Musik, DJs, Moderation, Licht-Shows und das Entertainment für edle, unvergessliche Hochzeiten.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Deutscher Rap & Urban Music</h3>
-                <p>Wir bringen den Hip-Hop-Vibe auf die Bühne! Buche topaktuelle deutsche Rapper, Live-Acts und Urban-DJs, die deine Crowd abreißen lassen und deine Location zum Kochen bringen.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Exklusive DJs & Live-Acts</h3>
-                <p>Keine Standard-Playlists! Unsere DJs & Musiker spielen maßgeschneiderte Sets – von edlen VIP-Lounges über traditionelle Hochzeits-Vibes bis hin zu eskalierenden Club-Tracks.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Full-Service Eventplanung</h3>
-                <p>Du musst dich um nichts kümmern! Wir übernehmen die komplette Planung, Künstlerbetreuung, Sound- & Stage-Technik, Security-Konzepte und die Organisation von A bis Z.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SPONSOREN BEREICH -->
-    <section id="sponsoring">
-        <div class="sponsor-box">
-            <h3>Werde <span>Sponsor</span> & Partner!</h3>
-            <p>
-                Du möchtest dein Unternehmen, deine Marke oder deine Produkte auf unseren exklusiven Partys, Festivals und Groß-Events präsentieren? Wir bieten perfekte Werbeflächen, VIP-Branding und direkte Reichweite bei einem feierfreudigen Publikum. Wir freuen uns riesig auf deine Partner-Anfrage!
-            </p>
-            <a href="#booking" class="btn-neon">Jetzt Sponsoring Anfragen</a>
-        </div>
-    </section>
-
-    <!-- KONTAKT & ANFRAGE FORMULAR -->
     <section class="booking-form" id="booking">
         <h2 class="section-title">Direkter <span>Kontakt & Anfrage</span></h2>
         
-        <!-- DIREKTE KONTAKT-BOTSCHAFTEN -->
         <div class="contact-info-container">
             <a href="https://wa.me/4915123832711" target="_blank" class="contact-card" style="border-color: var(--neon-green);">
-                <i class="fab fa-whatsapp" style="color: var(--neon-green);"></i>
-                <div>
-                    <strong style="display:block; font-size:0.85rem; color:var(--text-dim);">WhatsApp Direct</strong>
-                    0151 23832711
-                </div>
+                <i class="fab fa-whatsapp" style="color: var(--neon-green); font-size: 1.5rem;"></i>
+                <div><strong style="display:block; font-size:0.85rem; color:var(--text-dim);">WhatsApp Direct</strong> 0151 23832711</div>
             </a>
-
             <a href="mailto:bookings@tas-events.de" class="contact-card">
-                <i class="fas fa-envelope"></i>
-                <div>
-                    <strong style="display:block; font-size:0.85rem; color:var(--text-dim);">Booking Mail</strong>
-                    bookings@tas-events.de
-                </div>
-            </a>
-
-            <a href="mailto:taskin-tas@outlook.com" class="contact-card">
-                <i class="fas fa-paper-plane"></i>
-                <div>
-                    <strong style="display:block; font-size:0.85rem; color:var(--text-dim);">Persönlich / Info</strong>
-                    taskin-tas@outlook.com
-                </div>
+                <i class="fas fa-envelope" style="color: var(--neon-cyan); font-size: 1.5rem;"></i>
+                <div><strong style="display:block; font-size:0.85rem; color:var(--text-dim);">Booking Mail</strong> bookings@tas-events.de</div>
             </a>
         </div>
 
-        <!-- FORMULAR MIT FORMINIT BLOCK-KEYS -->
         <form action="https://forminit.com/f/rnpir45l23i" method="POST">
-            <input type="text" name="fi-sender-fullName" placeholder="Dein Name / Firmenname / Sponsor" required>
+            <input type="text" name="fi-sender-fullName" placeholder="Dein Name / Firmenname" required>
             <input type="email" name="fi-sender-email" placeholder="Deine E-Mail Adresse" required>
-            <input type="tel" name="fi-sender-phone" placeholder="Telefonnummer / WhatsApp" required>
             
             <select name="fi-data-service" required>
                 <option value="" disabled selected>Was ist dein Anliegen?</option>
-                <option value="Sponsoring / Partner-Anfrage">🤝 Sponsoring & Festival-Partnerschaft</option>
+                <option value="Sponsoring / Partner-Anfrage">🤝 Sponsoring & Partnerschaft</option>
                 <option value="Club Party / DJ Booking">Party, Club & DJ Booking</option>
-                <option value="Star Booking (TR / US / DE Rap)">Star Booking (TR / US / DE Stars)</option>
+                <option value="Star Booking">Star Booking</option>
                 <option value="Hochzeit / Wedding Planner">Traumhochzeit & Wedding Planning</option>
-                <option value="VIP Gala / Firmentevent">VIP Gala / Firmenevent</option>
+                <option value="Sonstiges">Sonstiges</option>
             </select>
             
-            <input type="text" name="fi-data-date_location" placeholder="Wann & wo soll das Event stattfinden? (Falls bekannt)" required>
+            <input type="text" name="fi-data-date_location" placeholder="Wann & wo findet das Event statt?" required>
             
-            <textarea name="fi-text-message" rows="5" placeholder="Deine Nachricht an uns (z. B. Sponsoring-Ideen, gewünschte Künstler, Gästeanzahl, Budget...)" required></textarea>
+            <textarea name="fi-text-message" rows="5" placeholder="Deine Nachricht an uns..." required></textarea>
             
             <button type="submit" class="btn-neon">Jetzt Nachricht Absenden</button>
         </form>
     </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 TAS-EVENTS & BOOKINGS. All Rights Reserved. | www.tas-events.de</p>
-    </footer>
 
 </body>
 </html>

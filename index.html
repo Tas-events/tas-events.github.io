@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAS-EVENTS & BOOKINGS | Star Bookings, DJs, Hochzeiten & Party Events</title>
-    <!-- Google Fonts & FontAwesome Icons für das WhatsApp-Logo -->
+    <!-- Google Fonts & FontAwesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -14,7 +14,7 @@
             --card-bg: #0d0e17;
             --neon-cyan: #00d2ff;
             --neon-pink: #f000ff;
-            --neon-green: #25D366; /* WhatsApp Grün */
+            --neon-green: #25D366;
             --text-color: #ffffff;
             --text-dim: #a5abcb;
             --gradient: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
@@ -94,6 +94,49 @@
         nav a:hover {
             color: var(--neon-cyan);
             text-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        /* DROPDOWN MENU FOR ARTIST & BOOKINGS */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: var(--card-bg);
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+            border: 1px solid var(--neon-cyan);
+            border-radius: 8px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: var(--text-color);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(0, 210, 255, 0.15);
+            color: var(--neon-cyan);
+            padding-left: 20px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
         /* HERO SECTION */
@@ -274,6 +317,86 @@
             line-height: 1.6;
         }
 
+        /* ARTIST & BOOKINGS INTERACTIVE SECTION */
+        .artist-bookings-section {
+            padding: 90px 5%;
+            background: #090a10;
+            border-top: 1px solid rgba(240, 0, 255, 0.2);
+        }
+
+        .ab-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .ab-main-btn {
+            background: var(--gradient);
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
+            margin-bottom: 40px;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .ab-main-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px var(--neon-pink);
+        }
+
+        .ab-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .ab-card {
+            background: var(--card-bg);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 15px;
+            padding: 30px 20px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .ab-card:hover {
+            background: rgba(0, 210, 255, 0.1);
+            border-color: var(--neon-pink);
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(240, 0, 255, 0.3);
+        }
+
+        .ab-card i {
+            font-size: 2.5rem;
+            color: var(--neon-cyan);
+            margin-bottom: 15px;
+        }
+
+        .ab-card h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .ab-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
         /* SPONSOREN BEREICH */
         .sponsor-box {
             margin: 70px 5%;
@@ -307,7 +430,7 @@
             line-height: 1.7;
         }
 
-        /* UMFRAGE SECTION (GOOGLE FORMULAR) */
+        /* UMFRAGE SECTION */
         .survey-section {
             padding: 90px 5%;
             background: #090a10;
@@ -414,14 +537,14 @@
 
         /* RESPONSIVE DESIGN */
         @media (max-width: 992px) {
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid, .ab-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
             .hero-title { font-size: 2.2rem; }
             .hero-subtitle { font-size: 1.1rem; }
             nav { display: none; }
-            .services-grid { grid-template-columns: 1fr; }
+            .services-grid, .ab-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -436,6 +559,14 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#artist-bookings">Artist & Bookings <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#artist-bookings">🎤 Künstler</a>
+                        <a href="#artist-bookings">🎧 DJs</a>
+                        <a href="#artist-bookings">🔥 Artisten</a>
+                    </div>
+                </li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#sponsoring">Sponsoring</a></li>
                 <li><a href="#umfrage">Umfrage</a></li>
@@ -448,7 +579,7 @@
     <section class="hero" id="home">
         <h1 class="hero-title">Unvergessliche Nächte & <span>Exklusive Events</span></h1>
         <p class="hero-subtitle">
-            Wir machen deine Events legendär! Egal ob gigantische Club-Partys, exklusive VIP-Nächte, Star-Bookings aus aller Welt oder traumhafte Hochzeiten – wir bringen the besten Artists, den besten Sound und ein unvergessliches Erlebnis.
+            Wir machen deine Events legendär! Egal ob gigantische Club-Partys, exklusive VIP-Nächte, Star-Bookings aus aller Welt oder traumhafte Hochzeiten – wir bringen die besten Artists, den besten Sound und ein unvergessliches Erlebnis.
         </p>
         <div class="btn-group">
             <a href="#booking" class="btn-neon">Event Anfragen</a>
@@ -468,6 +599,35 @@
             <span class="tag">Exklusive Club-DJs</span>
             <span class="tag">Live-Performances & Stars</span>
             <span class="tag">Wedding & Gala Sound</span>
+        </div>
+    </section>
+
+    <!-- ARTIST & BOOKINGS INTERACTIVE SECTION -->
+    <section class="artist-bookings-section" id="artist-bookings">
+        <div class="ab-container">
+            <button class="ab-main-btn">
+                <i class="fas fa-star"></i> Artist & Bookings
+            </button>
+            <p style="color: var(--text-dim); margin-bottom: 40px; font-size: 1.15rem;">
+                Wähle deine Kategorie und entdecke unsere hochkarätigen Live-Acts, Resident- & Club-DJs sowie exklusiven Bühnen-Artisten für dein Event.
+            </p>
+            <div class="ab-grid">
+                <a href="#booking" class="ab-card">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h4>Künstler</h4>
+                    <p>Türkische Pop-Größen, US & Deutscher Rap, Live-Stars und exklusive VIP-Bühnenacts.</p>
+                </a>
+                <a href="#booking" class="ab-card">
+                    <i class="fas fa-headphones-alt"></i>
+                    <h4>DJs</h4>
+                    <p>Top-Club-DJs, Urban & Electronic Beats, maßgeschneiderte Sets für jede Party.</p>
+                </a>
+                <a href="#booking" class="ab-card">
+                    <i class="fas fa-fire"></i>
+                    <h4>Artisten</h4>
+                    <p>Spektakuläre Show-Acts, Tänzer, Special Performances und Entertainer.</p>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -521,7 +681,7 @@
         </div>
     </section>
 
-    <!-- UMFRAGE SECTION (HIER IST DEINE GOOGLE-UMFRAGE EINGEBETTET) -->
+    <!-- UMFRAGE SECTION -->
     <section class="survey-section" id="umfrage">
         <h2 class="section-title">Nimm an unserer <span>Umfrage</span> teil!</h2>
         <p style="color: var(--text-dim); text-align: center; margin-bottom: 35px; font-size: 1.15rem; max-width: 600px;">
@@ -536,7 +696,6 @@
     <section class="booking-form" id="booking">
         <h2 class="section-title">Direkter <span>Kontakt & Anfrage</span></h2>
         
-        <!-- DIREKTE KONTAKT-BOTSCHAFTEN -->
         <div class="contact-info-container">
             <a href="https://wa.me/4915123832711" target="_blank" class="contact-card" style="border-color: var(--neon-green);">
                 <i class="fab fa-whatsapp" style="color: var(--neon-green);"></i>
@@ -563,7 +722,6 @@
             </a>
         </div>
 
-        <!-- FORMULAR MIT FORMINIT LINK -->
         <form action="https://forminit.com/f/n0oncgs81nk" method="POST">
             <input type="text" name="fi-sender-fullName" placeholder="Dein Name / Firmenname / Sponsor" required>
             <input type="email" name="fi-sender-email" placeholder="Deine E-Mail Adresse" required>

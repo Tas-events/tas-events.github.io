@@ -359,6 +359,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
+            margin-bottom: 60px;
         }
 
         .ab-card {
@@ -395,6 +396,86 @@
         .ab-card p {
             color: var(--text-dim);
             font-size: 0.95rem;
+        }
+
+        /* KÜNSTLER SHOWCASE (EMIRHAN) */
+        .artist-showcase {
+            background: var(--card-bg);
+            border: 2px solid var(--neon-pink);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 40px;
+            box-shadow: 0 0 35px rgba(240, 0, 255, 0.25);
+            text-align: left;
+        }
+
+        .artist-showcase-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 25px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .artist-showcase-title span {
+            color: var(--neon-pink);
+            text-shadow: 0 0 10px var(--neon-pink);
+        }
+
+        .artist-profile-grid {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .artist-img-box {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 3px solid var(--neon-cyan);
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.4);
+            flex-shrink: 0;
+        }
+
+        .artist-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .artist-info-box {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .artist-info-box h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6rem;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+        }
+
+        .artist-info-box .genre-badge {
+            display: inline-block;
+            background: rgba(240, 0, 255, 0.15);
+            border: 1px solid var(--neon-pink);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .artist-info-box p {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         /* SPONSOREN BEREICH */
@@ -545,6 +626,7 @@
             .hero-subtitle { font-size: 1.1rem; }
             nav { display: none; }
             .services-grid, .ab-grid { grid-template-columns: 1fr; }
+            .artist-profile-grid { text-align: center; }
         }
     </style>
 </head>
@@ -628,6 +710,26 @@
                     <p>Spektakuläre Show-Acts, Tänzer, Special Performances und Entertainer.</p>
                 </a>
             </div>
+
+            <!-- EXKLUSIVER KÜNSTLER (EMIRHAN) UNTER ARTIST BOOKINGS -->
+            <div class="artist-showcase">
+                <h3 class="artist-showcase-title">Featured Artist <span>// Türkische Pop & Live Performance</span></h3>
+                <div class="artist-profile-grid">
+                    <div class="artist-img-box">
+                        <!-- Ersetze den Link im src-Attribut mit dem echten Foto von Emirhan -->
+                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=600&q=80" alt="Emirhan - Türkischer Künstler">
+                    </div>
+                    <div class="artist-info-box">
+                        <h3>Emirhan</h3>
+                        <span class="genre-badge">Türkische Live-Musik & Pop</span>
+                        <p>
+                            Emirhan bringt das absolute Club- und Konzert-Feeling auf jede Bühne! Mit einer kraftvollen Stimme, moderner türkischer Pop- und Live-Performance begeistert er das Publikum vom ersten Song an und sorgt für unvergessliche Momente.
+                        </p>
+                        <a href="#booking" class="btn-neon" style="font-size: 0.85rem; padding: 12px 25px;">Emirhan Anfragen</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 

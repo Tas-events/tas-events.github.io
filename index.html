@@ -357,16 +357,17 @@
 
         .ab-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
         }
 
         .ab-card {
             background: var(--card-bg);
             border: 2px solid var(--neon-cyan);
             border-radius: 15px;
-            padding: 30px 20px;
+            padding: 35px 25px;
             transition: 0.3s;
             text-decoration: none;
             display: block;
@@ -592,7 +593,7 @@
 
         /* RESPONSIVE DESIGN */
         @media (max-width: 992px) {
-            .services-grid, .ab-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
@@ -618,9 +619,8 @@
                 <li class="dropdown">
                     <a href="#artist-bookings">Artist & Bookings <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="#artist-bookings">🎤 Künstler</a>
+                        <a href="#artist-bookings">🎤 Artist & DJs</a>
                         <a href="#artist-bookings">🎧 DJs</a>
-                        <a href="#artist-bookings">🔥 Artisten</a>
                     </div>
                 </li>
                 <li><a href="#services">Services</a></li>
@@ -664,23 +664,18 @@
                 <i class="fas fa-star"></i> Artist & Bookings
             </button>
             <p style="color: var(--text-dim); margin-bottom: 40px; font-size: 1.15rem;">
-                Wähle deine Kategorie und entdecke unsere hochkarätigen Live-Acts, Resident- & Club-DJs sowie exklusiven Bühnen-Artisten für dein Event.
+                Wähle deine Kategorie und entdecke unsere hochkarätigen Live-Acts sowie exklusiven Club-DJs für dein Event.
             </p>
             <div class="ab-grid">
                 <a href="#booking" class="ab-card">
                     <i class="fas fa-microphone-alt"></i>
-                    <h4>Künstler</h4>
-                    <p>Türkische Pop-Größen, US & Deutscher Rap, Live-Stars und exklusive VIP-Bühnenacts.</p>
+                    <h4>Artist & DJs</h4>
+                    <p>Türkische Pop-Größen, Live-Stars und exklusive VIP-Bühnenacts.</p>
                 </a>
                 <a href="#booking" class="ab-card">
                     <i class="fas fa-headphones-alt"></i>
                     <h4>DJs</h4>
                     <p>Top-Club-DJs, Urban & Electronic Beats, maßgeschneiderte Sets für jede Party.</p>
-                </a>
-                <a href="#booking" class="ab-card">
-                    <i class="fas fa-fire"></i>
-                    <h4>Artisten</h4>
-                    <p>Spektakuläre Show-Acts, Tänzer, Special Performances und Entertainer.</p>
                 </a>
             </div>
 

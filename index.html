@@ -96,7 +96,7 @@
             text-shadow: 0 0 10px var(--neon-cyan);
         }
 
-        /* DROPDOWN MENU FOR ARTIST & BOOKINGS */
+        /* DROPDOWN MENU */
         .dropdown {
             position: relative;
         }
@@ -317,7 +317,7 @@
             line-height: 1.6;
         }
 
-        /* ARTIST & BOOKINGS INTERACTIVE SECTION */
+        /* ARTIST INTERACTIVE SECTION */
         .artist-bookings-section {
             padding: 90px 5%;
             background: #090a10;
@@ -616,6 +616,7 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
                 <li class="dropdown">
                     <a href="#artist-bookings">Artist <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
                     <div class="dropdown-content">
@@ -623,7 +624,6 @@
                         <a href="#artist-bookings">🎧 DJs</a>
                     </div>
                 </li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#sponsoring">Sponsoring</a></li>
                 <li><a href="#booking">Kontakt</a></li>
             </ul>
@@ -644,7 +644,7 @@
         </div>
     </section>
 
-    <!-- GENRES BANNER -->
+    <!-- MUSIC & GENRES BANNER -->
     <section class="genres-banner" id="genres">
         <h3 style="font-family: 'Orbitron'; font-size: 1.2rem; color: #fff; text-transform: uppercase;">Unsere Musik- & Artist-Spezialisierungen:</h3>
         <div class="genre-tags">
@@ -657,51 +657,7 @@
         </div>
     </section>
 
-    <!-- ARTIST & BOOKINGS INTERACTIVE SECTION -->
-    <section class="artist-bookings-section" id="artist-bookings">
-        <div class="ab-container">
-            <button class="ab-main-btn">
-                <i class="fas fa-star"></i> Artist
-            </button>
-            <p style="color: var(--text-dim); margin-bottom: 40px; font-size: 1.15rem;">
-                Wähle deine Kategorie und entdecke unsere hochkarätigen Live-Acts sowie exklusiven Club-DJs für dein Event.
-            </p>
-            <div class="ab-grid">
-                <a href="#booking" class="ab-card">
-                    <i class="fas fa-microphone-alt"></i>
-                    <h4>Artist</h4>
-                    <p>Türkische Pop-Größen, Live-Stars und exklusive VIP-Bühnenacts.</p>
-                </a>
-                <a href="#booking" class="ab-card">
-                    <i class="fas fa-headphones-alt"></i>
-                    <h4>DJs</h4>
-                    <p>Top-Club-DJs, Urban & Electronic Beats, maßgeschneiderte Sets für jede Party.</p>
-                </a>
-            </div>
-
-            <!-- EXKLUSIVER KÜNSTLER (EMIRHAN) UNTER ARTIST BOOKINGS -->
-            <div class="artist-showcase">
-                <h3 class="artist-showcase-title">Featured Artist <span>// Türkische Pop & Live Performance</span></h3>
-                <div class="artist-profile-grid">
-                    <div class="artist-img-box">
-                        <!-- Lokales Emirhan Foto -->
-                        <img src="images/emirhan.jpg" alt="Emirhan - Türkischer Künstler">
-                    </div>
-                    <div class="artist-info-box">
-                        <h3>Emirhan</h3>
-                        <span class="genre-badge">Türkische Live-Musik & Pop</span>
-                        <p>
-                            Emirhan bringt das absolute Club- und Konzert-Feeling auf jede Bühne! Mit einer kraftvollen Stimme, moderner türkischer Pop- und Live-Performance begeistert er das Publikum vom ersten Song an und sorgt für unvergessliche Momente.
-                        </p>
-                        <a href="#booking" class="btn-neon" style="font-size: 0.85rem; padding: 12px 25px;">Emirhan Anfragen</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
+    <!-- SERVICES SECTION (JETZT VOR ARTIST) -->
     <section class="services" id="services">
         <h2 class="section-title">Unsere <span>Performance & Services</span></h2>
         
@@ -735,6 +691,49 @@
             <div class="service-card">
                 <h3>Full-Service Eventplanung</h3>
                 <p>Du musst dich um nichts kümmern! Wir übernehmen die komplette Planung, Künstlerbetreuung, Sound- & Stage-Technik, Security-Konzepte und die Organisation von A bis Z.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ARTIST INTERACTIVE SECTION -->
+    <section class="artist-bookings-section" id="artist-bookings">
+        <div class="ab-container">
+            <button class="ab-main-btn">
+                <i class="fas fa-star"></i> Artist
+            </button>
+            <p style="color: var(--text-dim); margin-bottom: 40px; font-size: 1.15rem;">
+                Wähle deine Kategorie und entdecke unsere hochkarätigen Live-Acts sowie exklusiven Club-DJs für dein Event.
+            </p>
+            <div class="ab-grid">
+                <a href="#booking" class="ab-card">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h4>Artist</h4>
+                    <p>Türkische Pop-Größen, Live-Stars und exklusive VIP-Bühnenacts.</p>
+                </a>
+                <a href="#booking" class="ab-card">
+                    <i class="fas fa-headphones-alt"></i>
+                    <h4>DJs</h4>
+                    <p>Top-Club-DJs, Urban & Electronic Beats, maßgeschneiderte Sets für jede Party.</p>
+                </a>
+            </div>
+
+            <!-- EXKLUSIVER KÜNSTLER (EMIRHAN) -->
+            <div class="artist-showcase">
+                <h3 class="artist-showcase-title">Featured Artist <span>// Türkische Pop & Live Performance</span></h3>
+                <div class="artist-profile-grid">
+                    <div class="artist-img-box">
+                        <img src="images/emirhan.jpg" alt="Emirhan - Türkischer Künstler">
+                    </div>
+                    <div class="artist-info-box">
+                        <h3>Emirhan</h3>
+                        <span class="genre-badge">Türkische Live-Musik & Pop</span>
+                        <p>
+                            Emirhan bringt das absolute Club- und Konzert-Feeling auf jede Bühne! Mit einer kraftvollen Stimme, moderner türkischer Pop- und Live-Performance begeistert er das Publikum vom ersten Song an und sorgt für unvergessliche Momente.
+                        </p>
+                        <a href="#booking" class="btn-neon" style="font-size: 0.85rem; padding: 12px 25px;">Emirhan Anfragen</a>
+                    </div>
+                </div>
             </div>
 
         </div>
